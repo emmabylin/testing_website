@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding:0;
+}
+
+/* This section cointains the main styles for our navigation bar */
+ul.topnav {
+    background-color: #00b8ab;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+ul.topnav li {
+    float: left;
+}
+
+ul.topnav li a {
+    display: block;
+    color: #f1f3f5;
+    font-family: Verdana, Arial, Tahoma, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* This section allows for the mouse-over effect when hobering over our navigationbar and displays which page is currently active */
+ul.topnav li a:hover:not(.active) {
+    background-color: #dcefed;
+    color: #00b8ab;
+}
+
+ul.topnav li a.active {
+    background-color: #dcefed;
+    color: #00b8ab;
+}
+
+
+/* This section changes the layout of the navigationbar on smaller screens to allow for easier navigation on moblie devices*/
+@media screen and (max-width: 600px) {
+    ul.topnav li {float: none;};
+    ul.topnav {position:relative;};
+}
+
+/* This section of my code sets the standard margins for the <main> section of the body. Note thaht the padding is set to % to make it work better across different resolutions */
+main {
+    padding-top: 5%;
+    padding-right: 15%;
+    padding-bottom: 5%;
+    padding-left: 15%;
+}
+
+/* This section makes the padding slightly smaler for mobile devices to make it easier to read*/
+@media screen and (max-width: 600px) {
+    main {padding: 8%}
+}
+
+/* This section changes the font for the page's headings*/
+h1 {
+  font-family: Verdana, Arial, Tahoma, sans-serif;
+}
+
+h2 {
+  font-family: Verdana, Arial, Tahoma, sans-serif;
+}
+
+h3 {
+  font-family: Verdana, Arial, Tahoma, sans-serif;
+}
+
+h4 {
+  font-family: Verdana, Arial, Tahoma, sans-serif;
+}
+
+/* This section allowss for the use of a grid on the peoples page*/
+.container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.container div {
+    background-color: #f1f3f5;
+    margin: 10px;
+    padding: 20px;
+}
+
+.container img {
+    width: 100%;
+    display: block;
+    object-fit: scale-down;
+}
+
+/* This section disables the grid for moblie devices, to make it easier to read */
+@media screen and (max-width: 600px) { 
+    .container {dislay:block}
+}
